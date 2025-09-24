@@ -1,0 +1,10 @@
+<odoo>
+  <report
+      id="report_partner_xlsx"
+      model="res.partner"
+      string="Partner XLSX"
+      report_type="xlsx"
+      name="my_module.partner_xlsx"
+      file="my_module.partner_xlsx"
+  />
+</odoo>
