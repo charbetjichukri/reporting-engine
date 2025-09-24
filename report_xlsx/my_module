@@ -1,0 +1,18 @@
+from odoo import models
+
+class PartnerXlsx(models.AbstractModel):
+    _name = 'report.my_module.partner_xlsx'
+    _inherit = 'report.report_xlsx.abstract'
+
+    def generate_xlsx_report(self, workbook, data, partners):
+        sheet = workbook.add_worksheet("Partners")
+        bold = workbook.add_format({'bold': True})
+
+        sheet.write(0, 0, 'Name', bold)
+        sheet.write(0, 1, 'Email', bold)
+
+        row = 1
+        for partner in partners:
+            sheet.write(row, 0, partner.name or '')
+            sheet.write(row, 1, partner.email or '')
+            row += 1
