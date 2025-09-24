@@ -18,4 +18,9 @@
             "report_xlsx/static/src/js/report/action_manager_report.esm.js",
         ],
     },
+    'data': [
+    'report/my_xlsx_report.xml',
+],
+'depends': ['base', 'report_xlsx'],
+
 }
